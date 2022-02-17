@@ -11,14 +11,25 @@ namespace MyReverseProxy
 
         internal static string GenerateKey(string path)
         {
+
             string key = createHash(path);
 
             checkCleanup();
-            
+            path = filterToUrl(path);
             proxiesMap.Add(key, path);
             counter++;
             return key;
             
+        }
+
+        private static string filterToUrl(string path)
+        {
+            string res = path;
+            if (!path.StartsWith("http"))
+            {
+                res = "http://" + path;
+            }
+            return res;
         }
 
         private static string createHash(string source)
