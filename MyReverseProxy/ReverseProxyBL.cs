@@ -7,7 +7,7 @@ namespace MyReverseProxy
     {
         public static Dictionary<string, string> proxiesMap { get; private set; } = new Dictionary<string, string>();
         public static int counter = 0;
-        private static int MAX_MAPPING_ALLOWED = 10000;
+        private const int MAX_MAPPING_ALLOWED = 10000;
 
         internal static string GenerateKey(string path)
         {

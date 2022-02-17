@@ -11,7 +11,7 @@ namespace MyReverseProxy.Controllers
         
 
 
-        [HttpGet(Name = "Go")]
+        [HttpGet(Name = "go")]
         public void Get(string key)
         {
             Response.Redirect("Https://"+ReverseProxyBL.proxiesMap[key]);

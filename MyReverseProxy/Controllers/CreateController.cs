@@ -6,7 +6,7 @@ namespace MyReverseProxy.Controllers
     [Route("[controller]")]
     public class CreateController : ControllerBase
     {
-        [HttpPost(Name = "Create")]
+        [HttpPost(Name = "create")]
         public string Create(string url)
         {
             return ReverseProxyBL.GenerateKey(url);
