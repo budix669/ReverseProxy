@@ -9,7 +9,7 @@ namespace MyReverseProxy.Controllers
         [HttpPost(Name = "create")]
         public string Create(string url)
         {
-            return ReverseProxyBL.GenerateKey(url);
+            return ReverseProxy.GenerateKey(url);
         }
     }
 }

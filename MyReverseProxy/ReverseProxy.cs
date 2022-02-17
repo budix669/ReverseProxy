@@ -3,7 +3,7 @@ using System.Text;
 
 namespace MyReverseProxy
 {
-    public static class ReverseProxyBL
+    public static class ReverseProxy
     {
         public static Dictionary<string, string> proxiesMap { get; private set; } = new Dictionary<string, string>();
         public static int counter = 0;
